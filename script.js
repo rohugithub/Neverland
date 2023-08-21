@@ -350,7 +350,7 @@ gsap.to("#page2-part2>h1>span",{
     start:'20% -30%',
     scrub:3,
     //markers:true,
-    pin:true
+    // pin:true
   },
   stagger:.28,
   opacity:1
@@ -372,11 +372,11 @@ gsap.to("#page2-part2>h2>span",{
   scrollTrigger:{
     trigger:'#page2-part2>h2>span',
     scroller:'#main',
-    end:'60% top',
+    end:'30% top',
     start:'20% -10%',
     scrub:3,
     //markers:true,
-    pin:true
+    // pin:true
   },
   stagger:.28,
   opacity:1
@@ -393,7 +393,7 @@ gsap.from("#page2>img",{
     //pin:true
   },
   position:"absolute",
-  y:800
+  y:700
 
 })
 
@@ -432,8 +432,8 @@ gsap.to('#page1>canvas',{
     pin:true
   },
   position: "absolute",
-  top: "10%",
-   scale:0.9,
+  top: "8%",
+   scale:0.8,
   
 })
 
@@ -456,13 +456,13 @@ gsap.to("#page3>h4>span",{
   scrollTrigger:{
     trigger:'#page3>h4>span',
     scroller:'#main',
-    end:'50% top',
-    start:'top 30%',
+    end:'30% top',
+    start:'top 50%',
     scrub:3,
     //markers:true,
-    pin:true
+    // pin:true
   },
-  stagger:.2,
+  stagger:.1,
   opacity:1
 })
 
@@ -484,11 +484,11 @@ gsap.to("#page3>h1>span",{
   scrollTrigger:{
     trigger:'#page3>h1>span',
     scroller:'#main',
-    start:'top 1%',
-    end:'-30% top',
+    start:'top 50%',
+    end:'80% top',
     scrub:3,
     //markers:true,
-    pin:true
+  
   },
   stagger:.1,
   opacity:1
@@ -512,12 +512,454 @@ gsap.to("#page3>h3>span",{
   scrollTrigger:{
     trigger:'#page3>h3>span',
     scroller:'#main',
-    start:'top 5%',
+    start:'top 50%',
     end:'-30% top',
     scrub:3,
-    markers:true,
-    pin:true
+    //markers:true,
+    //pin:true
   },
   stagger:.1,
+  opacity:1
+})
+
+
+
+
+gsap.to("#page4",{
+  scrollTrigger:{
+    trigger:`#page4`,
+    start:`top top`,
+    end:`130% top`,
+    // markers:true,
+    pin:true,
+    scrub:.15,
+    scroller:`#main`
+  }
+})
+
+gsap.to("#text1",{
+  scrollTrigger:{
+    trigger:`#text1`,
+    start:`top 50%`,
+    end:`100% top`,
+    // markers:true,
+    scrub:.15,
+    scroller:`#main`
+  },
+  top:`-100%`,
+})
+gsap.to("#text2",{
+  scrollTrigger:{
+    trigger:`#text2`,
+    start:`top  50%`,
+    end:`100% top`,
+    // markers:true,
+    scrub:.15,
+    scroller:`#main`
+  },
+  top:`-100%`,
+})
+gsap.to("#text3",{
+  scrollTrigger:{
+    trigger:`#text3`,
+    start:`top 50%`,
+    end:`100% top`,
+    // markers:true,
+    scrub:.15,
+    scroller:`#main`
+  },
+  top:`-100%`,
+})
+
+
+
+
+
+function split8(){
+  var clutter8=""
+  document.querySelector("#text-page>h1").textContent.split("").forEach(function(a){
+      clutter8+= `<span>${a}</span>`
+
+  });
+  document.querySelector("#text-page>h1").innerHTML=clutter8;
+
+}
+split8();
+
+
+gsap.to("#text-page>h1>span",{
+  scrollTrigger:{
+    trigger:'#text-page>h1>span',
+    scroller:'#main',
+    start:'top 50%',
+    end:'-30% top',
+    scrub:3,
+   // markers:true,
+    //pin:true
+  },
+  stagger:.1,
+  opacity:0
+})
+
+
+
+
+
+
+function canvas2(){
+  const canvas = document.querySelector("#page6>canvas");
+  const context = canvas.getContext("2d");
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+  
+  function files(index) {
+    var data = `
+    
+      https://neverland.agency/assets/0001.4d684736.webp
+      https://neverland.agency/assets/0002.8878f1bd.webp
+      https://neverland.agency/assets/0003.ca0e9c8a.webp
+      https://neverland.agency/assets/0004.2808c96d.webp
+      https://neverland.agency/assets/0005.137311c4.webp
+      https://neverland.agency/assets/0006.5cf19c96.webp
+      https://neverland.agency/assets/0007.6f0df1b2.webp
+      https://neverland.agency/assets/0008.a9704791.webp
+      https://neverland.agency/assets/0009.30e1da96.webp
+      https://neverland.agency/assets/0010.8e411586.webp
+      https://neverland.agency/assets/0011.833ea8cc.webp
+      https://neverland.agency/assets/0012.b66c8eec.webp
+      https://neverland.agency/assets/0013.f323e260.webp
+      https://neverland.agency/assets/0014.ebd01c73.webp
+      https://neverland.agency/assets/0015.c4b244d6.webp
+      https://neverland.agency/assets/0016.6e8ab877.webp
+      https://neverland.agency/assets/0017.4b250551.webp
+      https://neverland.agency/assets/0018.1250d182.webp
+      https://neverland.agency/assets/0019.97c4cdce.webp
+      https://neverland.agency/assets/0020.1273de08.webp
+      https://neverland.agency/assets/0021.72cdc020.webp
+      https://neverland.agency/assets/0022.321430f2.webp
+      https://neverland.agency/assets/0023.f986f3c5.webp
+      https://neverland.agency/assets/0024.75f68864.webp
+      https://neverland.agency/assets/0025.cb50ceaf.webp
+      https://neverland.agency/assets/0026.54f061ae.webp
+      https://neverland.agency/assets/0027.c4dd226b.webp
+      https://neverland.agency/assets/0028.62d0063e.webp
+      https://neverland.agency/assets/0029.ea637cf8.webp
+      https://neverland.agency/assets/0030.59808900.webp
+      https://neverland.agency/assets/0031.ca3f1ebf.webp
+      https://neverland.agency/assets/0032.788996d7.webp
+      https://neverland.agency/assets/0033.01a5016f.webp
+      https://neverland.agency/assets/0034.91d5f0ce.webp
+      https://neverland.agency/assets/0035.e1f61dec.webp
+      https://neverland.agency/assets/0036.f1847fbf.webp
+      https://neverland.agency/assets/0037.9741c29a.webp
+      https://neverland.agency/assets/0038.4c3879a9.webp
+      https://neverland.agency/assets/0039.877a7d4b.webp
+      https://neverland.agency/assets/0040.3d126791.webp
+      https://neverland.agency/assets/0041.19cf5945.webp
+      https://neverland.agency/assets/0042.58a17dbc.webp
+      https://neverland.agency/assets/0043.738a974f.webp
+      https://neverland.agency/assets/0044.4e5e1b94.webp
+      https://neverland.agency/assets/0045.b0512c82.webp
+      https://neverland.agency/assets/0046.61130815.webp
+      https://neverland.agency/assets/0047.61302406.webp
+      https://neverland.agency/assets/0048.9676d1a3.webp
+      https://neverland.agency/assets/0049.6832cd43.webp
+      https://neverland.agency/assets/0050.61eff422.webp
+      https://neverland.agency/assets/0051.1c30c844.webp
+      https://neverland.agency/assets/0052.982102e8.webp
+      https://neverland.agency/assets/0053.3087a1ec.webp
+      https://neverland.agency/assets/0054.204ca963.webp
+      https://neverland.agency/assets/0055.f9c81336.webp
+      https://neverland.agency/assets/0056.36da55de.webp
+      https://neverland.agency/assets/0057.4a7a0cc3.webp
+      https://neverland.agency/assets/0058.bb9ba99d.webp
+      https://neverland.agency/assets/0059.be67cd7f.webp
+      https://neverland.agency/assets/0060.81eb4911.webp
+      https://neverland.agency/assets/0061.c06b2a1e.webp
+      https://neverland.agency/assets/0062.72ecd370.webp
+      https://neverland.agency/assets/0063.e3227f0f.webp
+      https://neverland.agency/assets/0064.f83a0411.webp
+      https://neverland.agency/assets/0065.fd58eff1.webp
+      https://neverland.agency/assets/0066.4c66cccd.webp
+      https://neverland.agency/assets/0067.6f6d6b73.webp
+      https://neverland.agency/assets/0068.62b7a52f.webp
+      https://neverland.agency/assets/0069.7ea1d862.webp
+      https://neverland.agency/assets/0070.e5c1baf1.webp
+      https://neverland.agency/assets/0071.2a920e04.webp
+      https://neverland.agency/assets/0072.b0f6286e.webp
+      https://neverland.agency/assets/0073.a5c1826a.webp
+      https://neverland.agency/assets/0074.a2f57e5d.webp
+      https://neverland.agency/assets/0075.1c599655.webp
+      https://neverland.agency/assets/0076.5ca31f70.webp
+      https://neverland.agency/assets/0077.461139ae.webp
+      https://neverland.agency/assets/0078.e5ad54e2.webp
+      https://neverland.agency/assets/0079.19af7eed.webp
+      https://neverland.agency/assets/0080.7a910520.webp
+      https://neverland.agency/assets/0081.6b44c783.webp
+      https://neverland.agency/assets/0082.9d024f26.webp
+      https://neverland.agency/assets/0083.87ae5d36.webp
+      https://neverland.agency/assets/0084.d6f7c908.webp
+      https://neverland.agency/assets/0085.6db32e45.webp
+    
+   `;
+    return data.split("\n")[index];
+  }
+  
+  const frameCount = 85;
+  
+  const images = [];
+  const imageSeq = {
+    frame: 2,
+  };
+  
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
+  
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: 0.15,
+      trigger: `#page6`,
+      //   set start end according to preference
+      start: `top top`,
+      end: `600% top`,
+      scroller: `#main`,
+    },
+    onUpdate: render,
+  });
+  
+  images[2].onload = render;
+  
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+  
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.max(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+  
+    trigger: "#page6",
+    pin: true,
+    // markers:true,
+    scroller: `#main`,
+  //   set start end according to preference
+    start: `top top`,
+    end: `600% top`,
+  });
+  
+}
+canvas2()
+
+
+
+
+gsap.to('#page6',{
+  scrollTrigger:{
+    trigger:'#page6 ',
+    scroller:'#main',
+    start:'5% 0%',
+    end:'100% top',
+    scrub:.1,
+    // markers:true
+    pin:true
+  },
+  position: "absolute",
+  top: "1%",
+  //left: "50%",
+  // xPercent: -50,
+  // yPercent: -50,
+  // width:'90%',
+  // height:'90%',
+  // transform:'-50%,-50%',
+  scale:0.8,
+  //stagger:.1
+})
+
+
+
+function split9(){
+  var clutter9=""
+  document.querySelector("#page6>h2").textContent.split("").forEach(function(a){
+      clutter9+= `<span>${a}</span>`
+
+  });
+  document.querySelector("#page6>h2").innerHTML=clutter9;
+
+}
+split9();
+
+
+gsap.to("#page6>h2>span",{
+  scrollTrigger:{
+    trigger:'#page6>h2>span',
+    scroller:'#main',
+    start:'bottom -600%',
+    end:'-30% top',
+    scrub:3,
+    //markers:true,
+    //pin:true
+  },
+  stagger:.1,
+  opacity:1
+})
+
+
+
+
+let tl2= gsap.timeline({
+  scrollTrigger:{
+    trigger:".elem ,.elem2,.elem3",
+    scroller:"#main",
+    start:'bottom -600%',
+    end:'-30% top',
+    //markers:true,
+    scrub:2
+  },
+
+  
+
+})
+
+tl2.to(".elem",{
+  x:10,
+  opacity:1
+})
+
+tl2.to(".elem2",{
+  x:10,
+  opacity:1
+})
+
+tl2.to(".elem3",{
+  x:10,
+  opacity:1
+})
+
+
+// mouse move fucnction create
+
+let main= document.querySelector("#main")
+let cursor =document.querySelector("#cursor")
+
+
+let h3 = document.querySelector("#page8-part1>h3")
+
+main.addEventListener("mousemove",function(dets){
+  cursor.style.left=dets.x-80 +"px"
+  cursor.style.top=dets.y+"px"
+})
+
+
+
+h3.addEventListener("mouseenter",function(){
+    cursor.style.scale=2.5
+    cursor.style.mixBlendMode = `difference`
+    cursor.style.backgroundColor = `salmon`
+})
+
+h3.addEventListener("mouseleave",function(){
+  cursor.style.scale=1
+  cursor.style.mixBlendMode = `normal`
+  cursor.style.backgroundColor = `#000`
+  
+ })
+
+
+
+
+ let h4 =document.querySelector("#page8-part2>h4>span")
+
+ h4.addEventListener("mousemove",function(){
+  cursor.style.scale=2.5
+    cursor.style.mixBlendMode = `difference`
+    cursor.style.backgroundColor = `salmon`
+ })
+
+ h4.addEventListener("mouseleave",function(){
+  cursor.style.scale=1
+  cursor.style.mixBlendMode = `normal`
+  cursor.style.backgroundColor = `#000`
+  
+ })
+
+
+
+ let h5 =document.querySelector("#page8-part2>h5")
+
+ h5.addEventListener("mousemove",function(){
+  cursor.style.scale=2.5
+    cursor.style.mixBlendMode = `difference`
+    cursor.style.backgroundColor = `salmon`
+ })
+
+ h5.addEventListener("mouseleave",function(){
+  cursor.style.scale=1
+  cursor.style.mixBlendMode = `normal`
+  cursor.style.backgroundColor = `#000`
+  
+ })
+
+
+
+
+ let h2 =document.querySelector("#page8-part2>h2")
+
+ h2.addEventListener("mousemove",function(){
+  cursor.style.scale=2.5
+    cursor.style.mixBlendMode = `difference`
+    cursor.style.backgroundColor = `salmon`
+ })
+
+ h2.addEventListener("mouseleave",function(){
+  cursor.style.scale=1
+  cursor.style.mixBlendMode = `normal`
+  cursor.style.backgroundColor = `#000`
+  
+ })
+
+
+ gsap.to("#page2>h6",{
+  scrollTrigger:{
+    trigger:'#page2>h6',
+    scroller:'#main',
+    
+    end:'100% top',
+    start:'top 50%',
+    scrub:1,
+    //markers:true,
+    pin:true
+  },
+  x:50,
   opacity:1
 })
