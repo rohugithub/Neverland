@@ -347,7 +347,7 @@ gsap.to("#page2-part2>h1>span",{
     scroller:'#main',
     
     end:'100% top',
-    start:'20% -30%',
+    start:'80% -30%',
     scrub:3,
     //markers:true,
     // pin:true
@@ -949,6 +949,22 @@ h3.addEventListener("mouseleave",function(){
  })
 
 
+
+ let hov = document.querySelector("#page7>h3")
+ hov.addEventListener("mouseenter",function(){
+  cursor.style.scale=2.5
+  cursor.style.mixBlendMode = `difference`
+  cursor.style.backgroundColor = `salmon`
+ })
+
+
+ hov.addEventListener("mouseleave",function(){
+  cursor.style.scale=1
+  cursor.style.mixBlendMode = `normal`
+  cursor.style.backgroundColor = `#000`
+ })
+
+
  gsap.to("#page2>h6",{
   scrollTrigger:{
     trigger:'#page2>h6',
@@ -958,8 +974,40 @@ h3.addEventListener("mouseleave",function(){
     start:'top 50%',
     scrub:1,
     //markers:true,
-    pin:true
+    //pin:true
   },
   x:50,
   opacity:1
+})
+
+
+gsap.to("#page5>h5",{
+  scrollTrigger:{
+    trigger:'#page5>h5',
+    scroller:'#main',
+    
+    end:'100% top',
+    start:'top 50%',
+    scrub:1,
+    //markers:true,
+    //pin:true
+  },
+  x:50,
+  opacity:1
+})
+
+gsap.to("#page6>h4",{
+  scrollTrigger:{
+    trigger:'#page6>h4',
+    scroller:'#main',
+    
+    end:'100% top',
+    start:'top 50%',
+    scrub:1,
+    //markers:true,
+    //pin:true
+  },
+  x:50,
+  opacity:1,
+  color:"#fff"
 })

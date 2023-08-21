@@ -60,6 +60,7 @@ canvas{
     width: 100vw;
     position: relative;
     background-color: #FFFAF0;
+    padding: .1px;
     
 }
 
@@ -163,13 +164,13 @@ margin-top: 5px;
 }
 
 #page2>h6{
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     /* margin-left: 5%; */
-    font-family: gilroy;
-    font-weight: 400;
+    font-family: robo;
+     font-weight: 400;
     opacity: 0;
     margin-top: 10%;
-    position: absolute;
+    /* position: absolute; */
 }
 
 #page2 img{
@@ -256,7 +257,7 @@ margin-top: 5px;
     font-weight: 200;
     text-align: center;
     position: relative;
-    top:24% ;
+    top:45% ;
 
 }
 
@@ -267,7 +268,7 @@ margin-top: 5px;
     text-align: center;
     line-height: 4.7vw;
     position: relative;
-    bottom: -30%;
+    bottom: -47%;
     left: 50%;
     transform: translateX(-50%);
     
@@ -280,7 +281,7 @@ margin-top: 5px;
     text-align: center;
     line-height: 5.8vw;
     position: relative;
-    bottom: -37%;
+    bottom: -50%;
     left: 50%;
     transform: translateX(-50%);
     letter-spacing: -4px;
@@ -394,9 +395,20 @@ margin-top: 5px;
     width: 100vw;
     /* background-color: red; */
     padding-top: 25px;
+    position: relative;
     
 }
 
+
+#page5>h5{
+    font-size: 18px;
+    font-family: robo;
+    font-weight: 500;
+    position: absolute;
+    z-index: 999;
+    top: 10%;
+    opacity: 0;
+}
 
 #page5-part1{
     height: 30vh;
@@ -455,6 +467,16 @@ margin-top: 5px;
     width: 100vw;
     /* background-color: rgb(221, 61, 61);*/ 
     position: relative
+}
+
+#page6>h4{
+    font-size: 18px;
+    font-family: robo;
+    font-weight: 400;
+    position: absolute;
+    z-index: 999;
+    top: 10%;
+    opacity: 0;
 }
 
 #page6>canvas{
@@ -854,8 +876,8 @@ margin-top: 5px;
 }
 
 #cursor{
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     background-color: #000;
     position:fixed;
     z-index: 99999999;
